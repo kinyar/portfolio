@@ -1,0 +1,81 @@
+body {
+    background-color:cornsilk;
+    font-family:monospace;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap; /* A shorthand of "flex-direction: row" and "flex-wrap: wrap" together */
+    justify-content: space-evenly;
+    gap: 0 1rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.aboutclr {
+    color:blueviolet ;
+}
+
+.contactclr {
+    color:brown ;
+}
+
+.projectsclr {
+    color:blue ;
+}
+
+.intro {
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.downloadCV {
+    padding: 10px 20px;
+    border-radius: 9999px; 
+    position: relative;
+    color:black; 
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+}
+  
+.downloadCV::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 3px; 
+    border-radius: 9999px;
+    background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+    background-size: 400% 400%;
+    animation: rainbowBorder 8s linear infinite;
+    mask:inherit;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+  
+@keyframes rainbowBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+  
+
+.myskills {
+    text-align: center;
+    padding: 2%;
+    background-color:darksalmon;
+}
+
+.myskillsheader {
+    padding-left: 8%;
+    text-align: left;
+}
+
