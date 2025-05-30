@@ -3,6 +3,10 @@
   <head>
     <title>my projects</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/sdk/3.2/email.min.js"
+    ></script>
   </head>
   <body>
     <nav>
@@ -13,5 +17,47 @@
         <li><a class="contactclr">contact me!</a></li>
       </ul>
     </nav>
+    <div class="contact-container">
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="contact-left"
+      >
+        <div class="contact-left-title">
+          <h2>Contact me!</h2>
+          <hr />
+        </div>
+        <input
+          type="hidden"
+          name="access_key"
+          value="56b2061f-5195-42f0-8c0a-adaf34cc4ec3"
+        />
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name"
+          class="contact-inputs"
+          required
+        />
+        <input
+          type="text"
+          name="email"
+          placeholder="Your email"
+          class="contact-inputs"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your message"
+          class="contact-inputs"
+          required
+        ></textarea>
+        <button type="submit" class="emailMe">Submit</button>
+      </form>
+
+      <div class="contact-right">
+        <img src="assets/emailicon.png" alt="" />
+      </div>
+    </div>
   </body>
 </html>

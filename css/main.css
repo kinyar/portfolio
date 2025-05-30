@@ -1,81 +1,180 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*if you wanna go back to yellow do cornsilk
+*/
 body {
-    background-color:cornsilk;
-    font-family:monospace;
+  background-color: rgb(208, 230, 235);
+  font-family: monospace;
+  height: 100%;
+  margin: 0;
 }
 
 nav ul {
-    display: flex;
-    flex-flow: row wrap; /* A shorthand of "flex-direction: row" and "flex-wrap: wrap" together */
-    justify-content: space-evenly;
-    gap: 0 1rem;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 0 1rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .aboutclr {
-    color:blueviolet ;
+  color: blueviolet;
 }
 
 .contactclr {
-    color:brown ;
+  color: brown;
 }
 
 .projectsclr {
-    color:blue ;
+  color: blue;
 }
 
 .intro {
-    padding-left: 10%;
-    padding-top: 5%;
+  padding-left: 10%;
+  padding-top: 5%;
 }
 
 .downloadCV {
-    padding: 10px 20px;
-    border-radius: 9999px; 
-    position: relative;
-    color:black; 
-    font-weight: bold;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 1;
-    overflow: hidden;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  position: relative;
+  color: black;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
 }
-  
+
 .downloadCV::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    padding: 3px; 
-    border-radius: 9999px;
-    background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
-    background-size: 400% 400%;
-    animation: rainbowBorder 8s linear infinite;
-    mask:inherit;
-    -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    270deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  background-size: 400% 400%;
+  animation: rainbowBorder 8s linear infinite;
+  mask: inherit;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
 }
-  
+
 @keyframes rainbowBorder {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-  
 
 .myskills {
-    text-align: center;
-    padding: 2%;
-    background-color:darksalmon;
+  text-align: center;
+  padding: 2%;
+  background-color: darksalmon;
 }
 
 .myskillsheader {
-    padding-left: 8%;
-    text-align: left;
+  padding-left: 8%;
+  text-align: left;
 }
 
+.contact-container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.contact-left-title h2 {
+  font-weight: 600;
+  color: #6c3672;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.contact-left-title hr {
+  border: none;
+  width: 120px;
+  height: 5px;
+  background-color: #6c3672;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-inputs {
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 50px;
+}
+
+.contact-left textarea {
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+
+.contact-inputs:focus {
+  border: 2px solid #72365a;
+}
+
+.contact-inputs::placeholder {
+  color: #666;
+  font-family: monospace;
+}
+
+.emailMe {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: white;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background: #6c3672;
+  cursor: pointer;
+}
+
+.contact-right img {
+  width: 400px;
+}
